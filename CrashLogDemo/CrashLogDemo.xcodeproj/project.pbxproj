@@ -1,0 +1,362 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		242F8FA21523F04F0075C5E2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 242F8FA11523F04F0075C5E2 /* UIKit.framework */; };
+		242F8FA41523F04F0075C5E2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 242F8FA31523F04F0075C5E2 /* Foundation.framework */; };
+		242F8FA61523F04F0075C5E2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 242F8FA51523F04F0075C5E2 /* CoreGraphics.framework */; };
+		242F8FAC1523F04F0075C5E2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 242F8FAA1523F04F0075C5E2 /* InfoPlist.strings */; };
+		242F8FAE1523F04F0075C5E2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 242F8FAD1523F04F0075C5E2 /* main.m */; };
+		242F8FB21523F04F0075C5E2 /* CLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 242F8FB11523F04F0075C5E2 /* CLAppDelegate.m */; };
+		242F8FB51523F04F0075C5E2 /* CLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 242F8FB41523F04F0075C5E2 /* CLViewController.m */; };
+		242F8FB81523F04F0075C5E2 /* CLViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 242F8FB61523F04F0075C5E2 /* CLViewController_iPhone.xib */; };
+		242F8FBB1523F04F0075C5E2 /* CLViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 242F8FB91523F04F0075C5E2 /* CLViewController_iPad.xib */; };
+		242F8FCC1523F08C0075C5E2 /* libCrashLog.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 242F8FC91523F0790075C5E2 /* libCrashLog.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		242F8FC81523F0790075C5E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 242F8FC11523F0790075C5E2 /* CrashLog.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 242F8F2C1523E8EB0075C5E2;
+			remoteInfo = CrashLog;
+		};
+		242F8FCA1523F0840075C5E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 242F8FC11523F0790075C5E2 /* CrashLog.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 242F8F2B1523E8EB0075C5E2;
+			remoteInfo = CrashLog;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		242F8F9D1523F04F0075C5E2 /* CrashLogDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrashLogDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		242F8FA11523F04F0075C5E2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		242F8FA31523F04F0075C5E2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		242F8FA51523F04F0075C5E2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		242F8FA91523F04F0075C5E2 /* CrashLogDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CrashLogDemo-Info.plist"; sourceTree = "<group>"; };
+		242F8FAB1523F04F0075C5E2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		242F8FAD1523F04F0075C5E2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		242F8FAF1523F04F0075C5E2 /* CrashLogDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CrashLogDemo-Prefix.pch"; sourceTree = "<group>"; };
+		242F8FB01523F04F0075C5E2 /* CLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLAppDelegate.h; sourceTree = "<group>"; };
+		242F8FB11523F04F0075C5E2 /* CLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLAppDelegate.m; sourceTree = "<group>"; };
+		242F8FB31523F04F0075C5E2 /* CLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLViewController.h; sourceTree = "<group>"; };
+		242F8FB41523F04F0075C5E2 /* CLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLViewController.m; sourceTree = "<group>"; };
+		242F8FB71523F04F0075C5E2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CLViewController_iPhone.xib; sourceTree = "<group>"; };
+		242F8FBA1523F04F0075C5E2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CLViewController_iPad.xib; sourceTree = "<group>"; };
+		242F8FC11523F0790075C5E2 /* CrashLog.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CrashLog.xcodeproj; path = ../CrashLog.xcodeproj; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		242F8F9A1523F04F0075C5E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				242F8FCC1523F08C0075C5E2 /* libCrashLog.a in Frameworks */,
+				242F8FA21523F04F0075C5E2 /* UIKit.framework in Frameworks */,
+				242F8FA41523F04F0075C5E2 /* Foundation.framework in Frameworks */,
+				242F8FA61523F04F0075C5E2 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		242F8F921523F04F0075C5E2 = {
+			isa = PBXGroup;
+			children = (
+				242F8FC11523F0790075C5E2 /* CrashLog.xcodeproj */,
+				242F8FA71523F04F0075C5E2 /* CrashLogDemo */,
+				242F8FA01523F04F0075C5E2 /* Frameworks */,
+				242F8F9E1523F04F0075C5E2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		242F8F9E1523F04F0075C5E2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				242F8F9D1523F04F0075C5E2 /* CrashLogDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		242F8FA01523F04F0075C5E2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				242F8FA11523F04F0075C5E2 /* UIKit.framework */,
+				242F8FA31523F04F0075C5E2 /* Foundation.framework */,
+				242F8FA51523F04F0075C5E2 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		242F8FA71523F04F0075C5E2 /* CrashLogDemo */ = {
+			isa = PBXGroup;
+			children = (
+				242F8FB01523F04F0075C5E2 /* CLAppDelegate.h */,
+				242F8FB11523F04F0075C5E2 /* CLAppDelegate.m */,
+				242F8FB31523F04F0075C5E2 /* CLViewController.h */,
+				242F8FB41523F04F0075C5E2 /* CLViewController.m */,
+				242F8FB61523F04F0075C5E2 /* CLViewController_iPhone.xib */,
+				242F8FB91523F04F0075C5E2 /* CLViewController_iPad.xib */,
+				242F8FA81523F04F0075C5E2 /* Supporting Files */,
+			);
+			path = CrashLogDemo;
+			sourceTree = "<group>";
+		};
+		242F8FA81523F04F0075C5E2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				242F8FA91523F04F0075C5E2 /* CrashLogDemo-Info.plist */,
+				242F8FAA1523F04F0075C5E2 /* InfoPlist.strings */,
+				242F8FAD1523F04F0075C5E2 /* main.m */,
+				242F8FAF1523F04F0075C5E2 /* CrashLogDemo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		242F8FC21523F0790075C5E2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				242F8FC91523F0790075C5E2 /* libCrashLog.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		242F8F9C1523F04F0075C5E2 /* CrashLogDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 242F8FBE1523F04F0075C5E2 /* Build configuration list for PBXNativeTarget "CrashLogDemo" */;
+			buildPhases = (
+				242F8F991523F04F0075C5E2 /* Sources */,
+				242F8F9A1523F04F0075C5E2 /* Frameworks */,
+				242F8F9B1523F04F0075C5E2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				242F8FCB1523F0840075C5E2 /* PBXTargetDependency */,
+			);
+			name = CrashLogDemo;
+			productName = CrashLogDemo;
+			productReference = 242F8F9D1523F04F0075C5E2 /* CrashLogDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		242F8F941523F04F0075C5E2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = CL;
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = JOT;
+			};
+			buildConfigurationList = 242F8F971523F04F0075C5E2 /* Build configuration list for PBXProject "CrashLogDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 242F8F921523F04F0075C5E2;
+			productRefGroup = 242F8F9E1523F04F0075C5E2 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 242F8FC21523F0790075C5E2 /* Products */;
+					ProjectRef = 242F8FC11523F0790075C5E2 /* CrashLog.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				242F8F9C1523F04F0075C5E2 /* CrashLogDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		242F8FC91523F0790075C5E2 /* libCrashLog.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libCrashLog.a;
+			remoteRef = 242F8FC81523F0790075C5E2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		242F8F9B1523F04F0075C5E2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				242F8FAC1523F04F0075C5E2 /* InfoPlist.strings in Resources */,
+				242F8FB81523F04F0075C5E2 /* CLViewController_iPhone.xib in Resources */,
+				242F8FBB1523F04F0075C5E2 /* CLViewController_iPad.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		242F8F991523F04F0075C5E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				242F8FAE1523F04F0075C5E2 /* main.m in Sources */,
+				242F8FB21523F04F0075C5E2 /* CLAppDelegate.m in Sources */,
+				242F8FB51523F04F0075C5E2 /* CLViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		242F8FCB1523F0840075C5E2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CrashLog;
+			targetProxy = 242F8FCA1523F0840075C5E2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		242F8FAA1523F04F0075C5E2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				242F8FAB1523F04F0075C5E2 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		242F8FB61523F04F0075C5E2 /* CLViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				242F8FB71523F04F0075C5E2 /* en */,
+			);
+			name = CLViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		242F8FB91523F04F0075C5E2 /* CLViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				242F8FBA1523F04F0075C5E2 /* en */,
+			);
+			name = CLViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		242F8FBC1523F04F0075C5E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		242F8FBD1523F04F0075C5E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		242F8FBF1523F04F0075C5E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CrashLogDemo/CrashLogDemo-Prefix.pch";
+				HEADER_SEARCH_PATHS = "../CrashLog/**";
+				INFOPLIST_FILE = "CrashLogDemo/CrashLogDemo-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/CrashLogDemo-ftktkhtpgnjjqmffzxlwyzzydzbd/Build/Products/Debug-iphoneos\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		242F8FC01523F04F0075C5E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CrashLogDemo/CrashLogDemo-Prefix.pch";
+				HEADER_SEARCH_PATHS = "../CrashLog/**";
+				INFOPLIST_FILE = "CrashLogDemo/CrashLogDemo-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/CrashLogDemo-ftktkhtpgnjjqmffzxlwyzzydzbd/Build/Products/Debug-iphoneos\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		242F8F971523F04F0075C5E2 /* Build configuration list for PBXProject "CrashLogDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				242F8FBC1523F04F0075C5E2 /* Debug */,
+				242F8FBD1523F04F0075C5E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		242F8FBE1523F04F0075C5E2 /* Build configuration list for PBXNativeTarget "CrashLogDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				242F8FBF1523F04F0075C5E2 /* Debug */,
+				242F8FC01523F04F0075C5E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 242F8F941523F04F0075C5E2 /* Project object */;
+}

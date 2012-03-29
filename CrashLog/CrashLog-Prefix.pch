@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'CrashLog' target in the 'CrashLog' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif

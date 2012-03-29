@@ -1,0 +1,3 @@
+[submodule "TotoClient"]
+	path = TotoClient
+	url = git://github.com/JeremyOT/TotoClient-iOS.git

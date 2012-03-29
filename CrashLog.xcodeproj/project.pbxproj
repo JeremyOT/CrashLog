@@ -1,0 +1,295 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		242181EB152430E7007AC542 /* libTotoClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 242181E7152430B4007AC542 /* libTotoClient.a */; };
+		242F8F301523E8EB0075C5E2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 242F8F2F1523E8EB0075C5E2 /* Foundation.framework */; };
+		242F8F361523E8EB0075C5E2 /* CrashLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 242F8F351523E8EB0075C5E2 /* CrashLog.m */; };
+		242F8F8F1523EFF10075C5E2 /* CrashLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 242F8F341523E8EB0075C5E2 /* CrashLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		242F8FCE1523F80C0075C5E2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 242F8FCD1523F80C0075C5E2 /* UIKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		242181E6152430B4007AC542 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 242181DC152430B4007AC542 /* TotoClient.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 24FAA24314B76CBA005D8027;
+			remoteInfo = TotoClient;
+		};
+		242181E9152430E4007AC542 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 242181DC152430B4007AC542 /* TotoClient.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 24FAA24214B76CBA005D8027;
+			remoteInfo = TotoClient;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		242181DC152430B4007AC542 /* TotoClient.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TotoClient.xcodeproj; path = TotoClient/TotoClient.xcodeproj; sourceTree = "<group>"; };
+		242F8F2C1523E8EB0075C5E2 /* libCrashLog.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCrashLog.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		242F8F2F1523E8EB0075C5E2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		242F8F331523E8EB0075C5E2 /* CrashLog-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CrashLog-Prefix.pch"; sourceTree = "<group>"; };
+		242F8F341523E8EB0075C5E2 /* CrashLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CrashLog.h; sourceTree = "<group>"; };
+		242F8F351523E8EB0075C5E2 /* CrashLog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CrashLog.m; sourceTree = "<group>"; };
+		242F8FCD1523F80C0075C5E2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		242F8F291523E8EB0075C5E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				242181EB152430E7007AC542 /* libTotoClient.a in Frameworks */,
+				242F8FCE1523F80C0075C5E2 /* UIKit.framework in Frameworks */,
+				242F8F301523E8EB0075C5E2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		242181DD152430B4007AC542 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				242181E7152430B4007AC542 /* libTotoClient.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		242F8F211523E8EB0075C5E2 = {
+			isa = PBXGroup;
+			children = (
+				242181DC152430B4007AC542 /* TotoClient.xcodeproj */,
+				242F8FCD1523F80C0075C5E2 /* UIKit.framework */,
+				242F8F311523E8EB0075C5E2 /* CrashLog */,
+				242F8F2E1523E8EB0075C5E2 /* Frameworks */,
+				242F8F2D1523E8EB0075C5E2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		242F8F2D1523E8EB0075C5E2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				242F8F2C1523E8EB0075C5E2 /* libCrashLog.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		242F8F2E1523E8EB0075C5E2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				242F8F2F1523E8EB0075C5E2 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		242F8F311523E8EB0075C5E2 /* CrashLog */ = {
+			isa = PBXGroup;
+			children = (
+				242F8F341523E8EB0075C5E2 /* CrashLog.h */,
+				242F8F351523E8EB0075C5E2 /* CrashLog.m */,
+				242F8F321523E8EB0075C5E2 /* Supporting Files */,
+			);
+			path = CrashLog;
+			sourceTree = "<group>";
+		};
+		242F8F321523E8EB0075C5E2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				242F8F331523E8EB0075C5E2 /* CrashLog-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		242F8F2A1523E8EB0075C5E2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				242F8F8F1523EFF10075C5E2 /* CrashLog.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		242F8F2B1523E8EB0075C5E2 /* CrashLog */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 242F8F391523E8EB0075C5E2 /* Build configuration list for PBXNativeTarget "CrashLog" */;
+			buildPhases = (
+				242F8F281523E8EB0075C5E2 /* Sources */,
+				242F8F291523E8EB0075C5E2 /* Frameworks */,
+				242F8F2A1523E8EB0075C5E2 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				242181EA152430E4007AC542 /* PBXTargetDependency */,
+			);
+			name = CrashLog;
+			productName = CrashLog;
+			productReference = 242F8F2C1523E8EB0075C5E2 /* libCrashLog.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		242F8F231523E8EB0075C5E2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = JOT;
+			};
+			buildConfigurationList = 242F8F261523E8EB0075C5E2 /* Build configuration list for PBXProject "CrashLog" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 242F8F211523E8EB0075C5E2;
+			productRefGroup = 242F8F2D1523E8EB0075C5E2 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 242181DD152430B4007AC542 /* Products */;
+					ProjectRef = 242181DC152430B4007AC542 /* TotoClient.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				242F8F2B1523E8EB0075C5E2 /* CrashLog */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		242181E7152430B4007AC542 /* libTotoClient.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libTotoClient.a;
+			remoteRef = 242181E6152430B4007AC542 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXSourcesBuildPhase section */
+		242F8F281523E8EB0075C5E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				242F8F361523E8EB0075C5E2 /* CrashLog.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		242181EA152430E4007AC542 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TotoClient;
+			targetProxy = 242181E9152430E4007AC542 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		242F8F371523E8EB0075C5E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		242F8F381523E8EB0075C5E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		242F8F3A1523E8EB0075C5E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/CrashLog.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CrashLog/CrashLog-Prefix.pch";
+				HEADER_SEARCH_PATHS = "TotoClient/**";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		242F8F3B1523E8EB0075C5E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/CrashLog.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CrashLog/CrashLog-Prefix.pch";
+				HEADER_SEARCH_PATHS = "TotoClient/**";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		242F8F261523E8EB0075C5E2 /* Build configuration list for PBXProject "CrashLog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				242F8F371523E8EB0075C5E2 /* Debug */,
+				242F8F381523E8EB0075C5E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		242F8F391523E8EB0075C5E2 /* Build configuration list for PBXNativeTarget "CrashLog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				242F8F3A1523E8EB0075C5E2 /* Debug */,
+				242F8F3B1523E8EB0075C5E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 242F8F231523E8EB0075C5E2 /* Project object */;
+}
