@@ -27,7 +27,7 @@
 {
     [[CrashLog sharedCrashLog] registerCrashLog];
     // Update serviceURL and accountIdentifier to match your account ID and the address of the service that hosts reporting system
-    [[CrashLog sharedCrashLog] syncToServiceURL:[NSURL URLWithString:@"http://0.0.0.0:8888/logservice/"] accountIdentifier:@"Pv3VeVXORMyBDNdvWbz7kANT3QBWZfRViwA4-F_m2ygQ"];
+    [[CrashLog sharedCrashLog] syncToServiceURL:[NSURL URLWithString:@"http://0.0.0.0:8888/logservice/"] accountIdentifier:@"DEMO"];
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
