@@ -25,6 +25,8 @@
 // Note, calling registerCrashLog will deregister any other instances.
 // Use custom handlers if you want to intercept the uncaught exception.
 -(void)registerCrashLog;
+// Convenience method for registering then syncing the crash log.
+-(void)registerCrashLogWithServiceURL:(NSURL*)serviceURL accountIdentifier:(NSString*)accountIdentifier;
 -(void)deregisterCrashLog;
 -(void)syncToServiceURL:(NSURL*)serviceURL accountIdentifier:(NSString*)accountIdentifier;
 

@@ -10,20 +10,22 @@
 #import "TotoService.h"
 #include <execinfo.h>
 
-#define CrashLogCallStackSymbols @"CallStackSymbols"
 #define CrashLogSignalException @"CrashLogSignalException"
-#define CrashLogSignal @"Signal"
-#define CrashLogThread @"Thread"
-#define CrashLogCurrentQueue @"CurrentQueue"
-#define CrashLogExceptionDescription @"ExceptionDescription"
-#define CrashLogVersion @"Version"
-#define CrashLogShortVersion @"ShortVersion"
-#define CrashLogPlatform @"Platform"
-#define CrashLogPlatformVersion @"PlatformVersion"
-#define CrashLogModel @"Model"
-#define CrashLogAdditionalInformation @"AdditionalInformation"
-#define CrashLogCrashDate @"CrashDate"
 #define CrashLogFileName @"CrashLog.plist"
+
+#define CrashLogCallStackSymbols @"backtrace"
+#define CrashLogSignal @"signal"
+#define CrashLogThread @"thread"
+#define CrashLogCurrentQueue @"current_queue"
+#define CrashLogExceptionDescription @"exception_description"
+#define CrashLogVersion @"version"
+#define CrashLogShortVersion @"short_version"
+#define CrashLogPlatform @"platform"
+#define CrashLogPlatformVersion @"platform_version"
+#define CrashLogModel @"model"
+#define CrashLogAdditionalInformation @"additional_information"
+#define CrashLogCrashDate @"timestamp"
+
 
 @implementation NSThread (Backtrace)
 
@@ -60,25 +62,6 @@
     return sharedCrashLog;
 }
 
--(void)syncToServiceURL:(NSURL *)serviceURL accountIdentifier:(NSString *)accountIdentifier {
-    NSMutableArray *crashExceptions = [NSMutableArray arrayWithContentsOfFile:[CrashLog logFilePath]];
-    if (![crashExceptions count]) {
-        return;
-    }
-    TotoService *service = [TotoService serviceWithURL:serviceURL];
-    service.usesBSON = YES;
-    [service totoRequestWithMethodName:@"log.post" parameters:[NSDictionary dictionaryWithObjectsAndKeys:
-                                                               accountIdentifier, @"account_id",
-                                                               crashExceptions, @"logs",
-                                                               nil]
-                        receiveHandler:^(id obj) {
-                            NSLog(@"CrashLog Synced %d logs", [crashExceptions count]);
-                            [[NSFileManager defaultManager] removeItemAtPath:[CrashLog logFilePath] error:nil];
-                        } errorHandler:^(NSError *error) {
-                            NSLog(@"CrashLog Error syncing log %@", error);
-                        }];
-}
-
 void handleException(NSException *exception);
 void handleSignal(int signal);
 void handleException(NSException *exception) {
@@ -90,7 +73,6 @@ void handleException(NSException *exception) {
         [exceptionData setObject:[[NSThread currentThread] name] forKey:CrashLogThread];
     }
     [exceptionData setObject:[NSString stringWithFormat:@"%s", dispatch_queue_get_label(dispatch_get_current_queue())] forKey:CrashLogCurrentQueue];
-    [exceptionData setObject:[NSString stringWithFormat:@"%s", dispatch_queue_get_label(dispatch_get_current_queue())] forKey:CrashLogCurrentQueue];
     [exceptionData setObject:[exception description] forKey:CrashLogExceptionDescription];
     [exceptionData setObject:[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"] forKey:CrashLogVersion];
     [exceptionData setObject:[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"] forKey:CrashLogShortVersion];
@@ -98,11 +80,6 @@ void handleException(NSException *exception) {
     [exceptionData setObject:[[UIDevice currentDevice] systemVersion] forKey:CrashLogPlatformVersion];
     [exceptionData setObject:[[UIDevice currentDevice] model] forKey:CrashLogModel];
     [exceptionData setObject:[NSDate date] forKey:CrashLogCrashDate];
-    
-    NSLog(@"Exception:%@"
-          "\nID: %@",
-          exceptionData,
-          [[NSBundle mainBundle] bundleIdentifier]);
     NSMutableArray *crashExceptions = [NSMutableArray arrayWithContentsOfFile:[CrashLog logFilePath]];
     if (!crashExceptions) {
         crashExceptions = [NSMutableArray array];
@@ -176,11 +153,35 @@ void handleSignal(int signal) {
 	signal(SIGPIPE, SIG_DFL);
 }
 
+-(void)syncToServiceURL:(NSURL *)serviceURL accountIdentifier:(NSString *)accountIdentifier {
+    NSMutableArray *crashExceptions = [NSMutableArray arrayWithContentsOfFile:[CrashLog logFilePath]];
+    if (![crashExceptions count]) {
+        return;
+    }
+    TotoService *service = [TotoService serviceWithURL:serviceURL];
+    service.usesBSON = YES;
+    [service totoRequestWithMethodName:@"log.post" parameters:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                               accountIdentifier, @"account_id",
+                                                               crashExceptions, @"logs",
+                                                               [[NSBundle mainBundle] bundleIdentifier], @"app_id",
+                                                               nil]
+                        receiveHandler:^(id obj) {
+                            NSLog(@"CrashLog Synced %d logs", [crashExceptions count]);
+                            [[NSFileManager defaultManager] removeItemAtPath:[CrashLog logFilePath] error:nil];
+                        } errorHandler:^(NSError *error) {
+                            NSLog(@"CrashLog Error syncing log %@", error);
+                        }];
+}
+
+-(void)registerCrashLogWithServiceURL:(NSURL *)serviceURL accountIdentifier:(NSString *)accountIdentifier {
+    [self registerCrashLog];
+    [self syncToServiceURL:serviceURL accountIdentifier:accountIdentifier];
+}
+
 +(NSString *)logFilePath {
     NSString *logFilePath = nil;
     if (!logFilePath) {
-        logFilePath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:CrashLogFileName];
-//        [[NSFileManager defaultManager] createDirectoryAtPath:logFilePath withIntermediateDirectories:YES attributes:nil error:nil];
+        logFilePath = [[NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:CrashLogFileName];
     }
     return logFilePath;
 }

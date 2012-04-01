@@ -13,7 +13,6 @@ print "Enter your password"
 password = stdin.readline().strip()
 print "Enter your email"
 email = stdin.readline().strip()
-language = 1
 
 request = {}
 request['method'] = 'account.create'
@@ -25,7 +24,7 @@ headers = {'content-type': 'application/bson'}
 
 body = BSON.encode(request)
 
-req = urllib2.Request('http://localhost:8888/', body, headers)
+req = urllib2.Request('http://localhost:8888/logservice', body, headers)
 f = urllib2.urlopen(req)
 response = BSON(f.read()).decode()
 

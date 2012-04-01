@@ -9,28 +9,23 @@ import base64
 from sys import stdin
 from bson import BSON
 
-print "Enter your username"
-user_id = stdin.readline().strip()
-print "Enter your password"
-password = stdin.readline().strip()
+execfile('session.conf')
 
 request = {}
-request['method'] = 'account.login'
+request['method'] = 'app.show'
 request['parameters'] = {
-  'user_id': user_id,
-  'password': password
 }
 headers = {'content-type': 'application/bson'}
 
 body = BSON.encode(request)
+
+if session_id:
+  headers['x-toto-session-id'] = session_id
+  headers['x-toto-hmac'] = base64.b64encode(hmac.new(user_id, body, hashlib.sha1).digest())
 
 req = urllib2.Request('http://localhost:8888/logservice', body, headers)
 f = urllib2.urlopen(req)
 response = BSON(f.read()).decode()
 
 print response
-
-with open('session.conf', 'wb') as session_file:
-  session_file.write("session_id='%s'\n" % response['result']['session_id'])
-  session_file.write("user_id='%s'\n" % response['result']['user_id'])
 

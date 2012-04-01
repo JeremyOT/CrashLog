@@ -1,4 +1,3 @@
-import post
+import create
 import show
-import detail
 import remove
