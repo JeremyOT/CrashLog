@@ -1,5 +1,6 @@
 from toto.invocation import *
 from bson.objectid import ObjectId
+from time import mktime
 
 @authenticated
 @requires('log_id')
@@ -10,4 +11,10 @@ def invoke(handler, parameters):
   del log['_id']
   del log['user_id']
   log['log_id'] = parameters['log_id']
+  log['friendly_time'] = str(log['timestamp'])
+  log['timestamp'] = mktime(log['timestamp'].timetuple())
+  log['backtrace']
+  backtrace = [(int(t.split(' ', 1)[0]), t) for t in log['backtrace']]
+  backtrace.sort()
+  log['backtrace'] = [t[1] for t in backtrace]
   return log
