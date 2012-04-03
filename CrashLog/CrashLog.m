@@ -20,9 +20,9 @@
 #define CrashLogExceptionDescription @"exception_description"
 #define CrashLogVersion @"version"
 #define CrashLogShortVersion @"short_version"
-#define CrashLogPlatform @"platform"
-#define CrashLogPlatformVersion @"platform_version"
-#define CrashLogModel @"model"
+#define CrashLogPlatform @"os"
+#define CrashLogPlatformVersion @"os_version"
+#define CrashLogModel @"device"
 #define CrashLogAdditionalInformation @"additional_information"
 #define CrashLogCrashDate @"timestamp"
 
@@ -97,6 +97,7 @@ void handleException(NSException *exception) {
         }
     }
     [crashExceptions writeToFile:[CrashLog logFilePath] atomically:YES];
+    NSLog(@"Unhandled Exception: %@", exceptionData);
     [[CrashLog sharedCrashLog] deregisterCrashLog];
 	if ([[exception name] isEqual:CrashLogSignalException]) {
 		kill(getpid(), [[[exception userInfo] objectForKey:CrashLogCallStackSymbols] intValue]);
