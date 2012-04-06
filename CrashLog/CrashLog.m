@@ -67,7 +67,7 @@ void handleSignal(int signal);
 void handleException(NSException *exception) {
 	NSMutableDictionary *exceptionData = [NSMutableDictionary dictionaryWithDictionary:[exception userInfo]];
     if (![exceptionData objectForKey:CrashLogCallStackSymbols]) {
-        [exceptionData setObject:[exception callStackSymbols] forKey:CrashLogCallStackSymbols];
+        [exceptionData setObject:([exception callStackSymbols] ? [exception callStackSymbols] : [[NSThread currentThread] callStackSymbols]) forKey:CrashLogCallStackSymbols];
     }
     if ([[[NSThread currentThread] name] length]) {
         [exceptionData setObject:[[NSThread currentThread] name] forKey:CrashLogThread];
@@ -75,7 +75,9 @@ void handleException(NSException *exception) {
     [exceptionData setObject:[NSString stringWithFormat:@"%s", dispatch_queue_get_label(dispatch_get_current_queue())] forKey:CrashLogCurrentQueue];
     [exceptionData setObject:[exception description] forKey:CrashLogExceptionDescription];
     [exceptionData setObject:[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"] forKey:CrashLogVersion];
-    [exceptionData setObject:[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"] forKey:CrashLogShortVersion];
+    if ([[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]) {
+        [exceptionData setObject:[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"] forKey:CrashLogShortVersion];
+    }
     [exceptionData setObject:[[UIDevice currentDevice] systemName] forKey:CrashLogPlatform];
     [exceptionData setObject:[[UIDevice currentDevice] systemVersion] forKey:CrashLogPlatformVersion];
     [exceptionData setObject:[[UIDevice currentDevice] model] forKey:CrashLogModel];
