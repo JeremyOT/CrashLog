@@ -162,7 +162,6 @@ void handleSignal(int signal) {
         return;
     }
     TotoService *service = [TotoService serviceWithURL:serviceURL];
-    service.usesBSON = YES;
     [service totoRequestWithMethodName:@"log.post" parameters:[NSDictionary dictionaryWithObjectsAndKeys:
                                                                accountIdentifier, @"account_id",
                                                                crashExceptions, @"logs",

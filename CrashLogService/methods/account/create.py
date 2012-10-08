@@ -1,4 +1,4 @@
-import login
+import toto.methods.account.login as login
 from toto.invocation import *
 import uuid
 import base64
