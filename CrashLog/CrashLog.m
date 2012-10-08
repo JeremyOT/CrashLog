@@ -161,7 +161,7 @@ void handleSignal(int signal) {
     if (![crashExceptions count]) {
         return;
     }
-    TotoService *service = [TotoService serviceWithURL:serviceURL];
+    TotoService *service = [TotoService serviceWithURL:serviceURL BSON:YES];
     [service totoRequestWithMethodName:@"log.post" parameters:[NSDictionary dictionaryWithObjectsAndKeys:
                                                                accountIdentifier, @"account_id",
                                                                crashExceptions, @"logs",
